@@ -24,7 +24,7 @@ app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'ejs');
 
 app.get('/',function(req,res){
-    res.sendFile(__dirname+"/frontend/index.html");
+    res.sendFile(path.join(__dirname+"./frontend/index.html"));
 });
 app.use('/api/files', require('./routes/files'));
 app.use('/files', require('./routes/show'));
